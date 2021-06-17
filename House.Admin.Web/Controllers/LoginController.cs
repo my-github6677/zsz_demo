@@ -19,14 +19,14 @@ namespace House.Admin.Web.Controllers
         public ActionResult GetVerCode()
         {
             //获取n个随机数生成验证码
-            var vercode = Common.CommonHelper.CreateVerifyCode(4);
+            var vercode = Common.CommonHelper.CreateVerifyCode(5);
 
             //将验证码保存至TempData  TempData中使用过一次后即清空
             TempData["code"] = vercode;
 
             //使用CaptchaGen验证码组件生成图片流
             //1.验证码文字 2.高度 3.宽度 4.字体大小 5.字体扭曲程度
-            MemoryStream memoryStream = ImageFactory.GenerateImage(vercode, 60, 110, 25, 7);
+            MemoryStream memoryStream = ImageFactory.GenerateImage(vercode, 60, 110, 20, 10);
             return File(memoryStream, "image/jpeg");
         }
     }
