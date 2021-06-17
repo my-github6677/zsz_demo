@@ -5,15 +5,43 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CaptchaGen;
+using House.Admin.Web.Models;
+using House.Common;
+using House.IService;
 
-namespace House.Admin.Web.Controllers
-{
+namespace House.Admin.Web.Controllers{
+    
     public class LoginController : Controller
     {
+        public ILoginService loginService { get; set; }
+
         [HttpGet]
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(LoginModel loginModel)
+        {
+            if (ModelState.IsValid)
+            {
+                //1.判断验证码是否一致
+                if (loginModel.VerCode != TempData["code"].ToString())
+                {
+                    return Json(new AjaxResult() { Status = "error", ErrorMsg = "验证码不一致" });
+                }
+                //2.判断用户名密码
+                if (!loginService.GetByPhoneAndPwd(loginModel.phoneNum, loginModel.Pwd))
+                {
+                    return Json(new AjaxResult() { Status = "error", ErrorMsg = "手机号码或密码错误" });
+                }
+                return View("IndexView");
+            }
+            else 
+            {
+                return Json(new AjaxResult() { Status = "no", ErrorMsg = ModelStateExtensions.ExpendErrors(this) });
+            }
         }
 
         public ActionResult GetVerCode()
@@ -28,6 +56,11 @@ namespace House.Admin.Web.Controllers
             //1.验证码文字 2.高度 3.宽度 4.字体大小 5.字体扭曲程度
             MemoryStream memoryStream = ImageFactory.GenerateImage(vercode, 60, 110, 20, 10);
             return File(memoryStream, "image/jpeg");
+        }
+
+        public ActionResult IndexView()
+        {
+            return View();
         }
     }
 }
