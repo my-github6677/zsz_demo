@@ -1,0 +1,1492 @@
+2021-05-25 15:00:10,671 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:00:10 +08:00
+
+2021-05-25 15:00:10,684 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 15:00:10,685 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:10,685 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:00:10 +08:00
+
+2021-05-25 15:00:10,687 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 15:00:10,687 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:10,687 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:00:10 +08:00
+
+2021-05-25 15:00:10,862 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:00:10 +08:00
+
+2021-05-25 15:00:12,011 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 15:00:12,011 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:12,012 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 15:00:12,013 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:00:12,080 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 67 ms with result: SqlDataReader
+
+2021-05-25 15:00:12,080 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:12,088 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:00:12,116 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:00:12,191 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 15:00:12,191 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:12,191 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 15:00:12,191 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:00:12,216 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 24 ms with result: SqlDataReader
+
+2021-05-25 15:00:12,216 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:12,222 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:00:12,285 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:00:12,523 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 15:00:12,523 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:12,523 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:00:12,548 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 25 ms with result: SqlDataReader
+
+2021-05-25 15:00:12,548 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:00:12,549 [12] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:00:12 +08:00
+
+2021-05-25 15:02:08,812 [28] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:02:08 +08:00
+
+2021-05-25 15:02:08,812 [28] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 15:02:08,812 [28] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:02:08,812 [28] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:02:08 +08:00
+
+2021-05-25 15:02:08,813 [28] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 15:02:08,813 [28] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:02:08,813 [28] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:02:08 +08:00
+
+2021-05-25 15:15:36,844 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:15:36 +08:00
+
+2021-05-25 15:15:36,859 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 15:15:36,859 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:36,860 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:15:36 +08:00
+
+2021-05-25 15:15:36,862 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 15:15:36,862 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:36,863 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:15:36 +08:00
+
+2021-05-25 15:15:36,998 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:15:36 +08:00
+
+2021-05-25 15:15:38,621 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 15:15:38,621 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:38,622 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 15:15:38,623 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:15:38,624 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 15:15:38,624 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:38,632 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:15:38,644 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:15:38,715 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 15:15:38,715 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:38,715 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 15:15:38,715 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:15:38,715 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 15:15:38,715 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:38,721 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:15:38,766 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:15:38,917 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 15:15:38,917 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:38,917 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:15:38,918 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 15:15:38,918 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:15:38,918 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:15:38 +08:00
+
+2021-05-25 15:17:07,892 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:17:07 +08:00
+
+2021-05-25 15:17:07,893 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 15:17:07,894 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:17:07,894 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:17:07 +08:00
+
+2021-05-25 15:17:07,894 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 15:17:07,894 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:17:07,894 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:17:07 +08:00
+
+2021-05-25 15:17:49,031 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:17:49 +08:00
+
+2021-05-25 15:17:49,032 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 15:17:49,032 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:17:49,032 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:17:49 +08:00
+
+2021-05-25 15:17:49,032 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 15:17:49,032 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:17:49,032 [34] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:17:49 +08:00
+
+2021-05-25 15:23:46,827 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 15:23:46 +08:00
+
+2021-05-25 15:23:46,828 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 15:23:46,828 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:23:46,828 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 15:23:46 +08:00
+
+2021-05-25 15:23:46,828 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 15:23:46,828 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 15:23:46,828 [37] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 15:23:46 +08:00
+
+2021-05-25 16:25:56,612 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:25:56 +08:00
+
+2021-05-25 16:25:56,637 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:25:56,638 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:56,638 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:25:56 +08:00
+
+2021-05-25 16:25:56,663 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 23 ms with result: 17
+
+2021-05-25 16:25:56,663 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:56,663 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:25:56 +08:00
+
+2021-05-25 16:25:56,809 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:25:56 +08:00
+
+2021-05-25 16:25:57,889 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:25:57,889 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:57,891 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:25:57,891 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:25:57 +08:00
+
+2021-05-25 16:25:57,892 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:25:57,892 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:57,906 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:25:57 +08:00
+
+2021-05-25 16:25:57,924 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:25:57 +08:00
+
+2021-05-25 16:25:58,026 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:25:58,026 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:58,026 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:25:58,026 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:25:58 +08:00
+
+2021-05-25 16:25:58,026 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:25:58,026 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:58,033 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:25:58 +08:00
+
+2021-05-25 16:25:58,087 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:25:58 +08:00
+
+2021-05-25 16:25:58,260 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:25:58,261 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:58,261 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:25:58 +08:00
+
+2021-05-25 16:25:58,261 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:25:58,262 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:25:58,262 [39] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:25:58 +08:00
+
+2021-05-25 16:28:09,449 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:28:09 +08:00
+
+2021-05-25 16:28:09,450 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:28:09,450 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:28:09,450 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:28:09 +08:00
+
+2021-05-25 16:28:09,450 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:28:09,450 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:28:09,498 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:28:09 +08:00
+
+2021-05-25 16:28:51,284 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:28:51 +08:00
+
+2021-05-25 16:28:51,285 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:28:51,285 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:28:51,285 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:28:51 +08:00
+
+2021-05-25 16:28:51,286 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:28:51,286 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:28:51,287 [47] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:28:51 +08:00
+
+2021-05-25 16:33:39,976 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:33:39 +08:00
+
+2021-05-25 16:33:39,989 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:33:39,989 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:39,990 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:33:39 +08:00
+
+2021-05-25 16:33:39,992 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:33:39,992 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:39,992 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:33:39 +08:00
+
+2021-05-25 16:33:40,246 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:33:40 +08:00
+
+2021-05-25 16:33:41,664 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:33:41,664 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:41,667 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:33:41,667 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:33:41 +08:00
+
+2021-05-25 16:33:41,710 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 43 ms with result: SqlDataReader
+
+2021-05-25 16:33:41,710 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:41,718 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:33:41 +08:00
+
+2021-05-25 16:33:41,732 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:33:41 +08:00
+
+2021-05-25 16:33:41,809 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:33:41,809 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:41,809 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:33:41,809 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:33:41 +08:00
+
+2021-05-25 16:33:41,823 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 14 ms with result: SqlDataReader
+
+2021-05-25 16:33:41,823 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:41,829 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:33:41 +08:00
+
+2021-05-25 16:33:41,883 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:33:41 +08:00
+
+2021-05-25 16:33:42,065 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:33:42,065 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:42,065 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:33:42 +08:00
+
+2021-05-25 16:33:42,067 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:33:42,067 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:33:42,071 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:33:42 +08:00
+
+2021-05-25 16:34:36,459 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:34:36 +08:00
+
+2021-05-25 16:34:36,478 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:34:36,478 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:36,479 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:34:36 +08:00
+
+2021-05-25 16:34:36,714 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 231 ms with result: 17
+
+2021-05-25 16:34:36,714 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:36,714 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:34:36 +08:00
+
+2021-05-25 16:34:37,153 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:34:37 +08:00
+
+2021-05-25 16:34:39,184 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:34:39,184 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:39,186 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:34:39,186 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:34:39,252 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 66 ms with result: SqlDataReader
+
+2021-05-25 16:34:39,252 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:39,262 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:34:39,304 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:34:39,441 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:34:39,441 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:39,442 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:34:39,442 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:34:39,444 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:34:39,444 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:39,450 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:34:39,500 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:34:39,747 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:34:39,747 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:39,747 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:34:39,748 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:34:39,748 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:34:39,768 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:34:39 +08:00
+
+2021-05-25 16:37:00,077 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:37:00 +08:00
+
+2021-05-25 16:37:00,097 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:37:00,097 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:00,098 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:37:00 +08:00
+
+2021-05-25 16:37:00,101 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:37:00,101 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:00,101 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:37:00 +08:00
+
+2021-05-25 16:37:00,476 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:37:00 +08:00
+
+2021-05-25 16:37:01,772 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:37:01,772 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:01,773 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:37:01,773 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:37:01 +08:00
+
+2021-05-25 16:37:01,776 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 2 ms with result: SqlDataReader
+
+2021-05-25 16:37:01,776 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:01,783 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:37:01 +08:00
+
+2021-05-25 16:37:01,795 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:37:01 +08:00
+
+2021-05-25 16:37:01,880 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:37:01,880 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:01,880 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:37:01,880 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:37:01 +08:00
+
+2021-05-25 16:37:01,881 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:37:01,881 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:01,887 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:37:01 +08:00
+
+2021-05-25 16:37:01,933 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:37:01 +08:00
+
+2021-05-25 16:37:02,115 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:37:02,115 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:02,115 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:37:02 +08:00
+
+2021-05-25 16:37:02,116 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:37:02,116 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:37:02,121 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:37:02 +08:00
+
+2021-05-25 16:41:51,089 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:41:51 +08:00
+
+2021-05-25 16:41:51,108 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:41:51,108 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:51,108 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:41:51 +08:00
+
+2021-05-25 16:41:51,110 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:41:51,110 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:51,111 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:41:51 +08:00
+
+2021-05-25 16:41:51,475 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:41:51 +08:00
+
+2021-05-25 16:41:52,606 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:41:52,606 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:52,607 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:41:52,607 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:41:52 +08:00
+
+2021-05-25 16:41:52,609 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:41:52,609 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:52,616 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:41:52 +08:00
+
+2021-05-25 16:41:52,628 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:41:52 +08:00
+
+2021-05-25 16:41:52,702 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:41:52,703 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:52,703 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:41:52,703 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:41:52 +08:00
+
+2021-05-25 16:41:52,703 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:41:52,703 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:52,708 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:41:52 +08:00
+
+2021-05-25 16:41:52,759 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:41:52 +08:00
+
+2021-05-25 16:41:53,357 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:41:53,357 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:53,357 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:41:53 +08:00
+
+2021-05-25 16:41:53,367 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 9 ms with result: SqlDataReader
+
+2021-05-25 16:41:53,367 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:41:53,373 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:41:53 +08:00
+
+2021-05-25 16:42:30,791 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:42:30 +08:00
+
+2021-05-25 16:42:30,806 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:42:30,807 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:30,807 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:42:30 +08:00
+
+2021-05-25 16:42:30,809 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:42:30,809 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:30,809 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:42:30 +08:00
+
+2021-05-25 16:42:31,176 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:42:31 +08:00
+
+2021-05-25 16:42:32,288 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:42:32,288 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:32,289 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:42:32,289 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:42:32,290 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:42:32,290 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:32,298 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:42:32,309 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:42:32,391 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:42:32,391 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:32,391 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:42:32,391 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:42:32,391 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:42:32,391 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:32,396 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:42:32,444 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:42:32,654 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:42:32,654 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:32,655 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:42:32,655 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:42:32,655 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:42:32,659 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:42:32 +08:00
+
+2021-05-25 16:44:00,685 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:44:00 +08:00
+
+2021-05-25 16:44:00,709 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:44:00,709 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:00,711 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:44:00 +08:00
+
+2021-05-25 16:44:00,714 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: 17
+
+2021-05-25 16:44:00,714 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:00,715 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:44:00 +08:00
+
+2021-05-25 16:44:01,156 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:44:01 +08:00
+
+2021-05-25 16:44:02,636 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:44:02,636 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:02,638 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:44:02,638 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:44:02 +08:00
+
+2021-05-25 16:44:02,639 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:44:02,639 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:02,649 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:44:02 +08:00
+
+2021-05-25 16:44:02,666 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:44:02 +08:00
+
+2021-05-25 16:44:02,755 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:44:02,755 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:02,755 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:44:02,755 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:44:02 +08:00
+
+2021-05-25 16:44:02,755 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:44:02,755 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:02,763 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:44:02 +08:00
+
+2021-05-25 16:44:02,822 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:44:02 +08:00
+
+2021-05-25 16:44:03,006 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:44:03,006 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:03,007 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:44:03 +08:00
+
+2021-05-25 16:44:03,008 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:44:03,008 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:03,016 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:44:03 +08:00
+
+2021-05-25 16:44:18,561 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:44:18 +08:00
+
+2021-05-25 16:44:18,588 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] LIKE @p__linq__0 ESCAPE N'~')
+2021-05-25 16:44:18,588 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:18,589 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'null' (Type = String, Size = 4000)
+
+2021-05-25 16:44:18,589 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:44:18 +08:00
+
+2021-05-25 16:44:18,641 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 52 ms with result: SqlDataReader
+
+2021-05-25 16:44:18,641 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:44:18,641 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:44:18 +08:00
+
+2021-05-25 16:46:16,577 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:46:16 +08:00
+
+2021-05-25 16:46:16,595 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:46:16,596 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:16,596 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:46:16 +08:00
+
+2021-05-25 16:46:16,599 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: 17
+
+2021-05-25 16:46:16,599 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:16,599 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:46:16 +08:00
+
+2021-05-25 16:46:17,013 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:46:17 +08:00
+
+2021-05-25 16:46:18,255 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:46:18,256 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:18,258 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:46:18,258 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:18,260 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 2 ms with result: SqlDataReader
+
+2021-05-25 16:46:18,260 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:18,269 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:18,285 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:18,368 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:46:18,368 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:18,368 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:46:18,368 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:18,368 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:46:18,369 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:18,374 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:18,421 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:18,633 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:46:18,634 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:18,634 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:18,634 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:46:18,634 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:18,641 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:46:18 +08:00
+
+2021-05-25 16:46:36,345 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:46:36 +08:00
+
+2021-05-25 16:46:36,346 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:46:36,346 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:36,346 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:46:36 +08:00
+
+2021-05-25 16:46:36,346 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:46:36,347 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:36,347 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:46:36 +08:00
+
+2021-05-25 16:46:47,610 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:46:47 +08:00
+
+2021-05-25 16:46:47,610 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:46:47,610 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:47,610 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:46:47 +08:00
+
+2021-05-25 16:46:47,611 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:46:47,611 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:46:47,611 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:46:47 +08:00
+
+2021-05-25 16:52:09,135 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:09 +08:00
+
+2021-05-25 16:52:09,149 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:52:09,149 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:09,149 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:09 +08:00
+
+2021-05-25 16:52:09,152 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:52:09,152 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:09,152 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:09 +08:00
+
+2021-05-25 16:52:09,577 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:09 +08:00
+
+2021-05-25 16:52:10,626 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:52:10,626 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:10,627 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:52:10,627 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:10,628 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:52:10,628 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:10,634 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:10,647 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:10,732 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:52:10,732 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:10,732 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:52:10,733 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:10,733 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:52:10,733 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:10,739 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:10,785 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:10,962 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:52:10,963 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:10,963 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:10,963 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:52:10,963 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:10,967 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:10 +08:00
+
+2021-05-25 16:52:16,391 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:16 +08:00
+
+2021-05-25 16:52:16,395 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:52:16,395 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:16,395 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:16 +08:00
+
+2021-05-25 16:52:16,395 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:52:16,395 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:16,396 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:16 +08:00
+
+2021-05-25 16:52:20,061 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:20 +08:00
+
+2021-05-25 16:52:20,062 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:52:20,062 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:20,062 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:20 +08:00
+
+2021-05-25 16:52:20,062 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:52:20,062 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:20,062 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:20 +08:00
+
+2021-05-25 16:52:50,350 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:50 +08:00
+
+2021-05-25 16:52:50,366 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:52:50,366 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:50,366 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:50 +08:00
+
+2021-05-25 16:52:50,369 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:52:50,369 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:50,369 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:50 +08:00
+
+2021-05-25 16:52:50,776 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:50 +08:00
+
+2021-05-25 16:52:51,958 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:52:51,958 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:51,960 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:52:51,960 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:51 +08:00
+
+2021-05-25 16:52:51,962 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:52:51,962 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:51,972 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:51 +08:00
+
+2021-05-25 16:52:51,988 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:51 +08:00
+
+2021-05-25 16:52:52,058 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:52:52,059 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:52,059 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:52:52,059 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:52 +08:00
+
+2021-05-25 16:52:52,059 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:52:52,059 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:52,064 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:52 +08:00
+
+2021-05-25 16:52:52,111 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:52:52 +08:00
+
+2021-05-25 16:52:52,294 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:52:52,294 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:52,294 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:52:52 +08:00
+
+2021-05-25 16:52:52,295 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:52:52,295 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:52:52,299 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:52:52 +08:00
+
+2021-05-25 16:54:16,333 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:54:16 +08:00
+
+2021-05-25 16:54:16,348 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:54:16,348 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:16,348 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:54:16 +08:00
+
+2021-05-25 16:54:16,350 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:54:16,350 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:16,350 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:54:16 +08:00
+
+2021-05-25 16:54:16,720 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:54:16 +08:00
+
+2021-05-25 16:54:17,820 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:54:17,820 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:17,822 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:54:17,822 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:54:17 +08:00
+
+2021-05-25 16:54:17,824 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 1 ms with result: SqlDataReader
+
+2021-05-25 16:54:17,824 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:17,833 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:54:17 +08:00
+
+2021-05-25 16:54:17,846 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:54:17 +08:00
+
+2021-05-25 16:54:17,934 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:54:17,934 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:17,935 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:54:17,935 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:54:17 +08:00
+
+2021-05-25 16:54:17,935 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:54:17,935 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:17,940 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:54:17 +08:00
+
+2021-05-25 16:54:17,990 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:54:17 +08:00
+
+2021-05-25 16:54:18,165 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:54:18,166 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:18,166 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:54:18 +08:00
+
+2021-05-25 16:54:18,166 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:54:18,166 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:54:18,171 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:54:18 +08:00
+
+2021-05-25 16:55:36,685 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:55:36 +08:00
+
+2021-05-25 16:55:36,707 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] LIKE @p__linq__0 ESCAPE N'~')
+2021-05-25 16:55:36,707 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:55:36,707 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'null' (Type = String, Size = 4000)
+
+2021-05-25 16:55:36,707 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:55:36 +08:00
+
+2021-05-25 16:55:36,708 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:55:36,708 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:55:36,708 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:55:36 +08:00
+
+2021-05-25 16:57:01,519 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:57:01 +08:00
+
+2021-05-25 16:57:01,533 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminLogs','dbo.T_AdminUsers','dbo.T_Cities','dbo.T_Roles','dbo.T_Permissions','dbo.T_Attachments','dbo.T_Houses','dbo.T_Communities','dbo.T_Regions','dbo.T_IdNames','dbo.T_HousePics','dbo.T_HouseAppointments','dbo.T_Users','dbo.T_Settings','dbo.T_RolePermissions','dbo.T_AdminUserRoles','dbo.T_HouseAttachments')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2021-05-25 16:57:01,533 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:01,534 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:57:01 +08:00
+
+2021-05-25 16:57:01,535 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: 17
+
+2021-05-25 16:57:01,535 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:01,535 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:57:01 +08:00
+
+2021-05-25 16:57:01,826 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:57:01 +08:00
+
+2021-05-25 16:57:03,030 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2021-05-25 16:57:03,030 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:03,031 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:57:03,032 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:03,033 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:57:03,033 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:03,043 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:03,059 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:03,144 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2021-05-25 16:57:03,144 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:03,145 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'House.Service.HouseContext' (Type = String, Size = 4000)
+
+2021-05-25 16:57:03,145 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:03,145 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:57:03,145 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:03,150 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:03,192 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:03,359 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+2021-05-25 16:57:03,359 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:03,359 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:03,359 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:57:03,360 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:03,363 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:57:03 +08:00
+
+2021-05-25 16:57:09,180 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:57:09 +08:00
+
+2021-05-25 16:57:09,196 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] LIKE @p__linq__0 ESCAPE N'~')
+2021-05-25 16:57:09,196 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:09,196 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'null' (Type = String, Size = 4000)
+
+2021-05-25 16:57:09,196 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:57:09 +08:00
+
+2021-05-25 16:57:09,197 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:57:09,197 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:09,197 [6] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:57:09 +08:00
+
+2021-05-25 16:57:10,625 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句Opened connection at 2021/5/25 16:57:10 +08:00
+
+2021-05-25 16:57:10,627 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_Permissions] AS [Extent1]
+    WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] LIKE @p__linq__0 ESCAPE N'~')
+2021-05-25 16:57:10,627 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:10,627 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- p__linq__0: 'null' (Type = String, Size = 4000)
+
+2021-05-25 16:57:10,627 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Executing at 2021/5/25 16:57:10 +08:00
+
+2021-05-25 16:57:10,628 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句-- Completed in 0 ms with result: SqlDataReader
+
+2021-05-25 16:57:10,628 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句
+
+2021-05-25 16:57:10,628 [7] DEBUG House.Service.HouseContext - EF开始执行sql语句Closed connection at 2021/5/25 16:57:10 +08:00
+

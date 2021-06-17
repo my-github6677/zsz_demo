@@ -1,0 +1,72 @@
+﻿@model House.Admin.Web.Models.RoleEditModel
+@{
+    ViewBag.Title = "角色编辑";
+}
+
+<div class="pd-20">
+    <form class="form form-horizontal" id="form-add">
+        <input type="hidden" name="Id" value="@Model.roleDTO.Id" />
+        <div class="row cl">
+            <label class="form-label col-2"><span class="c-red">*</span>角色名称：</label>
+            <div class="formControls col-5">
+                <input type="text" class="input-text" placeholder="角色名称" id="Name" name="Name" datatype="*2-16" nullmsg="角色名称不能为空" value="@Model.roleDTO.Name">
+            </div>
+            <div class="col-4"> </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-2">角色权限：</label>
+            <div class="formControls col-10">
+                @foreach (var perm in Model.permissionsAll)
+                {
+                    <div class="col-xs-12 col-sm-3">
+                        <input type="checkbox" id="PermissionIds_@perm.Id" name="PermissionIds" value="@perm.Id" checked="@Model.permissionExists.Select(s=>s.Id).ToList().Contains(perm.Id)" />
+                        <label for="PermissionIds_@perm.Id">@perm.Description</label>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-10 col-offset-2">
+                <button type="button" class="btn btn-success radius" id="admin-role-save" name="admin-role-save"><i class="icon-ok"></i> 确定</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section foot
+{
+    <script type="text/javascript">
+        $(function () {
+            $('#admin-role-save').click(function () {
+                var validf = $('#form-add').Validform({ tipType: 2 });
+                var iform = $('#form-add').serializeArray();
+                if (validf.check(false)) {
+                    $.ajax({
+                        url: '/Role/Edit',
+                        type: 'post',
+                        data: iform,
+                        dataType: 'json',
+                        success: function (r) {
+                            if (r.Status == 'ok') {
+                                layer.alert('更新成功', function () {
+                                    var index = parent.layer.getFrameIndex(window.name);
+                                    parent.location.reload();
+                                    parent.layer.close(index);
+                                })
+                            }
+                            else if (r.Status == 'no') {
+                                layer.alert('更新失败');
+                            }
+                            else {
+                                layer.alert(r.ErrorMsg);
+                            }
+                        },
+                        error: function () {
+                            layer.alert('异常')
+                        }
+                    });
+                }
+            })
+        });
+    </script>    
+}

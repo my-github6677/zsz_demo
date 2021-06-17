@@ -1,0 +1,133 @@
+﻿@model House.Admin.Web.Models.AdminGetModel
+@{
+    ViewBag.Title = "添加管理员";
+}
+
+<div class="pd-20">
+    <form class="form form-horizontal" id="form-admin-add">
+        <div class="row cl">
+            <label class="form-label col-3"><span class="c-red">*</span>管理员：</label>
+            <div class="formControls col-5">
+                <input type="text" class="input-text" value="" placeholder="管理员名称" id="user-name" name="Name" datatype="*2-16" nullmsg="管理员不能为空">
+            </div>
+            <div class="col-4"> </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-3"><span class="c-red">*</span>初始密码：</label>
+            <div class="formControls col-5">
+                <input type="password" placeholder="密码" autocomplete="off" value="" class="input-text" datatype="*6-20" nullmsg="密码不能为空" name="newpassword" id="newpassword">
+            </div>
+            <div class="col-4"> </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-3"><span class="c-red">*</span>确认密码：</label>
+            <div class="formControls col-5">
+                <input type="password" placeholder="确认新密码" value="" autocomplete="off" class="input-text" errormsg="您两次输入的新密码不一致！" datatype="*" nullmsg="请再输入一次新密码！" recheck="newpassword" id="newpassword2" name="newpassword2">
+            </div>
+            <div class="col-4"> </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-3"><span class="c-red">*</span>手机：</label>
+            <div class="formControls col-5">
+                <input type="text" class="input-text" value="" placeholder="手机号码" id="user-tel" name="phone" datatype="m" nullmsg="手机不能为空">
+            </div>
+            <div class="col-4"> </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-3"><span class="c-red">*</span>邮箱：</label>
+            <div class="formControls col-5">
+                <input type="text" class="input-text" placeholder="邮箱地址" name="email" id="email" datatype="e" nullmsg="请输入邮箱！">
+            </div>
+            <div class="col-4"> </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-3">城市：</label>
+            <div class="formControls col-5">
+                <span class="select-box" style="width:150px;">
+                    @Html.DropDownList("CityId", new SelectList(Model.cityDTO, "Id", "Name"), new { @class = "select" })
+                </span>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-3">角色：</label>
+            <div class="formControls col-9">
+                @foreach (var item in Model.roleDTO)
+                {
+                    <div class="col-xs-12 col-sm-3">
+                        <input type="checkbox" id="RoleIds_@item.Id" name="RoleIds" value="@item.Id" />
+                        <label for="RoleIds_@item.Id">@item.Name</label>
+                    </div>
+                }
+            </div>
+            <div class="col-4"> </div>
+        </div>
+        <div class="row cl">
+            <div class="col-9 col-offset-3">
+                <input class="btn btn-primary radius" type="button" id="btn_add" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</div>
+@section foot
+{
+    <script type="text/javascript">
+        $(function () {
+            var validf = $("#form-admin-add").Validform({ tiptype: 2 });
+            $("#btn_add").click(function () {
+                var iform = $("#form-admin-add").serializeArray();
+                if (validf.check(false)) {
+                    $.ajax({
+                        url: '/Admin/Add',
+                        type: 'post',
+                        data: iform,
+                        dataType: 'json',
+                        success: function (s) {
+                            if (s.Status == 'ok') {
+                                layer.alert("添加成功", function () {
+                                    var index = parent.layer.getFrameIndex(window.name);
+                                    parent.location.reload();
+                                    parent.layer.close(index);
+                                });
+                            }
+                            else if (s.Status == 'exists') {
+                                layer.alert("手机号码已存在");
+                            }
+                            else if (s.Status =='noarray') {
+                                layer.alert("请选择角色");
+                            }
+                            else if (s.Status == 'no') {
+                                layer.alert("添加失败");
+                            }
+                            else {
+                                layer.alert(s.ErrorMsg);
+                            }
+                        },
+                        error: function () {
+                            layer.alert("异常");
+                        }
+                    });
+                }
+            });
+
+            $("#user-tel").blur(function () {
+                var phoneNum = $("#user-tel").val();
+                if (phoneNum.length > 0) {
+                    $.ajax({
+                        url: "/Admin/IsExists",
+                        type: "post",
+                        data: { 'phone': phoneNum },
+                        dataType: 'json',
+                        success: function (r) {
+                            if (r.Status == "exists") {
+                                layer.msg('手机号码已存在！', { icon: 2, time: 1000 });
+                            }
+                        },
+                        error: function () {
+                            layer.alert("手机号异常");
+                        }
+                    })
+                }
+            })
+        });
+    </script>
+}
