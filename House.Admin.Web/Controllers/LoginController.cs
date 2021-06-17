@@ -26,7 +26,7 @@ namespace House.Admin.Web.Controllers
 
             //使用CaptchaGen验证码组件生成图片流
             //1.验证码文字 2.高度 3.宽度 4.字体大小 5.字体扭曲程度
-            MemoryStream memoryStream = ImageFactory.GenerateImage(vercode, 60, 110, 20, 10);
+            MemoryStream memoryStream = ImageFactory.GenerateImage(vercode, 60, 110, 20, 9);
             return File(memoryStream, "image/jpeg");
         }
     }
