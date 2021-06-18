@@ -19,6 +19,7 @@ namespace House.Admin.Web
         {
             log4net.Config.XmlConfigurator.Configure();//程序启动然后启动log4net日志框架
             GlobalFilters.Filters.Add(new HouseExceptionFilter());//增加自定义异常处理器
+            GlobalFilters.Filters.Add(new HouseAuthorizationFilter());//增加权限管理过滤器
 
             ModelBinders.Binders.Add(typeof(string), new TrimToDBCModelBinder());//处理圆角半角和空格问题（？）
             ModelBinders.Binders.Add(typeof(int), new TrimToDBCModelBinder());

@@ -13,6 +13,7 @@ namespace House.Admin.Web.Models
         public string phoneNum { get; set; }
 
         [Required(ErrorMessage ="密码不能为空！")]
+        [StringLength(16, MinimumLength = 6, ErrorMessage = "密码长度必须是6~16位！")]
         public string Pwd { get; set; }
 
         [Required(ErrorMessage ="验证码不能为空！")]

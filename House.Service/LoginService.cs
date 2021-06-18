@@ -1,6 +1,7 @@
 ﻿using House.IService;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,12 @@ namespace House.Service
             {
                 BaseService<AdminUserEntity> ba = new BaseService<AdminUserEntity>(db);
                 var admin = ba.GetAll().FirstOrDefault(m => m.PhoneNum == phoneNum);
+                if (admin == null)
+                {
+                    return false;
+                }
                 var truePwd = Common.CommonHelper.CalcMD5(Pwd + admin.PasswordSalt);
-                return admin.PasswordHash == truePwd;
+                return (admin.PasswordHash == truePwd);  
             }
         }
     }

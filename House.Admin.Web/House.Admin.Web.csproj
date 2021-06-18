@@ -147,6 +147,7 @@
     <Content Include="images\acrossTab.png" />
     <Content Include="images\admin-login-bg.jpg" />
     <Content Include="images\admin-loginform-bg.png" />
+    <Content Include="images\favicon.ico" />
     <Content Include="images\gq\cn.gif" />
     <Content Include="images\gq\gj.png" />
     <Content Include="images\gq\us.gif" />
@@ -1358,9 +1359,35 @@
     <Content Include="lib\zTree\v3\js\jquery.ztree.exhide-3.5.js" />
     <Content Include="lib\zTree\v3\js\jquery.ztree.exhide-3.5.min.js" />
     <Content Include="lib\zTree\v3\log v3.x.txt" />
+    <Content Include="skin\blue\acrossTab-bg.png" />
+    <Content Include="skin\blue\acrossTab.png" />
+    <Content Include="skin\blue\icon_arrow.png" />
+    <Content Include="skin\blue\skin.css" />
+    <Content Include="skin\default\acrossTab-bg.png" />
+    <Content Include="skin\default\acrossTab.png" />
+    <Content Include="skin\default\icon_arrow.png" />
+    <Content Include="skin\default\skin.css" />
+    <Content Include="skin\green\acrossTab-bg.png" />
+    <Content Include="skin\green\acrossTab.png" />
+    <Content Include="skin\green\icon_arrow.png" />
+    <Content Include="skin\green\skin.css" />
+    <Content Include="skin\orange\acrossTab-bg.png" />
+    <Content Include="skin\orange\acrossTab.png" />
+    <Content Include="skin\orange\icon_arrow.png" />
+    <Content Include="skin\orange\skin.css" />
+    <Content Include="skin\red\acrossTab-bg.png" />
+    <Content Include="skin\red\acrossTab.png" />
+    <Content Include="skin\red\icon_arrow.png" />
+    <Content Include="skin\red\skin.css" />
+    <Content Include="skin\yellow\acrossTab-bg.png" />
+    <Content Include="skin\yellow\acrossTab.png" />
+    <Content Include="skin\yellow\icon_arrow.png" />
+    <Content Include="skin\yellow\skin.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\CheckPermissionAttribute.cs" />
+    <Compile Include="App_Start\HouseAuthorizationFilter.cs" />
     <Compile Include="App_Start\HouseExceptionFilter.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
@@ -1487,6 +1514,12 @@
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\IndexView.cshtml" />
+    <Content Include="skin\blue\Thumbs.db" />
+    <Content Include="skin\default\Thumbs.db" />
+    <Content Include="skin\green\Thumbs.db" />
+    <Content Include="skin\orange\Thumbs.db" />
+    <Content Include="skin\red\Thumbs.db" />
+    <Content Include="skin\yellow\Thumbs.db" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

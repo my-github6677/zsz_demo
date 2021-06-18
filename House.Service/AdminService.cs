@@ -58,6 +58,32 @@ namespace House.Service
             }
         }
 
+        /// <summary>
+        /// 查询用户的权限，是否符合Attribute标记
+        /// </summary>
+        /// <param name="loginId"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public bool HasPermissions(long? loginId, string name)
+        {
+            using (HouseContext db = new HouseContext())
+            {
+                BaseService<AdminUserEntity> ba = new BaseService<AdminUserEntity>(db);
+                var amdin = ba.GetAll().Include(m => m.City).SingleOrDefault(m => m.Id == loginId);
+                if (amdin == null)
+                {
+                    throw new Exception("不存在id为" + loginId + "的用户");
+                }
+                else
+                {
+                    //每个Role都有一个Permissions属性
+                    //Roles.SelectMany(r => r.Permissions)就是遍历Roles的每一个Role
+                    //然后把每个Role的Permissions放到一个集合中
+                    //IEnumerable<PermissionEntity>
+                    return amdin.Roles.SelectMany(role => role.Permissions).Any(per => per.Name == name);
+                }
+            }
+        }
 
 
         public AdminDTO[] GetAll()

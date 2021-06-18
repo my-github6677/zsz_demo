@@ -22,5 +22,7 @@ namespace House.IService
         AdminDTO[] GetByTimeName(string stime, string etime, string username);
 
         int UpdateAdminUser(long Id, string Name, string newpassword, string phone, string email, long? CityId, long[] RoleIds);
+
+        bool HasPermissions(long? loginId, string name);
     }
 }

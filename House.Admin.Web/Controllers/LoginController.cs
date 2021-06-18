@@ -14,10 +14,16 @@ namespace House.Admin.Web.Controllers{
     public class LoginController : Controller
     {
         public ILoginService loginService { get; set; }
+        public IAdminService adminService { get; set; }
 
         [HttpGet]
         public ActionResult Index()
         {
+            if (Session["LoginID"] != null)
+            {
+                Session["LoginID"] = null;
+                Session.Abandon();
+            }
             return View();
         }
 
@@ -32,11 +38,13 @@ namespace House.Admin.Web.Controllers{
                     return Json(new AjaxResult() { Status = "error", ErrorMsg = "验证码不一致" });
                 }
                 //2.判断用户名密码
-                if (!loginService.GetByPhoneAndPwd(loginModel.phoneNum, loginModel.Pwd))
+                var result = loginService.GetByPhoneAndPwd(loginModel.phoneNum, loginModel.Pwd);
+                if (!result)
                 {
                     return Json(new AjaxResult() { Status = "error", ErrorMsg = "手机号码或密码错误" });
                 }
-                return View("IndexView");
+                Session["LoginID"] = adminService.IsExistsByPhone(loginModel.phoneNum).Id;
+                return Json(new AjaxResult() { Status = "yes" });
             }
             else 
             {

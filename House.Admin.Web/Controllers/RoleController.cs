@@ -1,4 +1,5 @@
-﻿using House.Admin.Web.Models;
+﻿using House.Admin.Web.App_Start;
+using House.Admin.Web.Models;
 using House.Common;
 using House.IService;
 using System;
@@ -15,6 +16,7 @@ namespace House.Admin.Web.Controllers
         public IPermissionService permissionService { get; set; }
 
         [HttpGet]
+        [CheckPermission("jslb")]
         public ActionResult Index()
         {
             var roledto = roleService.GetAll();

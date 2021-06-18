@@ -3,26 +3,29 @@
     ViewBag.Title = "登录";
 }
 <link href="~/css/H-ui.login.css" rel="stylesheet" type="text/css" />
-<input type="hidden" id="TenantId" name="TenantId" value="" />
+
 <div class="header"></div>
 <div class="loginWraper">
     <div id="loginform" class="loginBox">
-        <form class="form form-horizontal" action="index.html" method="post">
+        <form class="form form-horizontal" id="lform">
             <div class="row cl">
                 <label class="form-label col-3"><i class="Hui-iconfont">&#xe60d;</i></label>
-                <div class="formControls col-8">
-                    <input id="" name="phoneNum" type="text" placeholder="手机号码" class="input-text size-L">
+                <div class="formControls col-5">
+                    <input id="" name="phoneNum" type="text" datatype="m" nullmsg="手机不能为空" placeholder="手机号码" class="input-text size-L">                    
                 </div>
+                <div class="col-3"> </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-3"><i class="Hui-iconfont">&#xe60e;</i></label>
-                <div class="formControls col-8">
-                    <input id="" name="Pwd" type="password" placeholder="密码" class="input-text size-L">
+                <div class="formControls col-5">
+                    <input id="" name="Pwd" type="password" placeholder="密码" datatype="*6-16" nullmsg="密码不能为空" class="input-text size-L">
                 </div>
+                <div class="col-3"> </div>
+
             </div>
             <div class="row cl">
                 <div class="formControls col-8 col-offset-3">
-                    <input class="input-text size-L" type="text" name="VerCode" placeholder="验证码" onblur="if(this.value==''){this.value='验证码:'}" onclick="if(this.value=='验证码:'){this.value='';}" value="验证码:" style="width:150px;">
+                    <input class="input-text size-L" type="text" name="VerCode" placeholder="验证码"  style="width:150px;">
                     <img src="/Login/GetVerCode" id="checkimg"> <a id="kanbuq" href="javascript:;">看不清，换一张</a>
                 </div>
             </div>
@@ -36,7 +39,7 @@
             </div>
             <div class="row">
                 <div class="formControls col-8 col-offset-3">
-                    <input name="" type="button" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+                    <input id="btn_save" type="button" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
                     <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;">
                 </div>
             </div>
@@ -52,6 +55,32 @@
                 $("#checkimg").attr("src", "/Login/GetVerCode?_=" + Math.random());
             });
             $("#checkimg").click();//为了避免页面刚打开时加载缓冲中的"/Login/GetVerCode",因此主动点击一下刷新验证码
+
+            var valid = $("#lform").Validform({ tiptype: 2 });            
+            $("#btn_save").click(function () {        
+                var iform = $("#lform").serializeArray();
+                if (valid.check(false)) {
+                    $.ajax({
+                        url: "/Login/Index",
+                        type: "post",
+                        data: iform,
+                        dataType: "json",
+                        success: function (r) {
+                            if (r.Status == "error" || r.Status == "no") {
+                                layer.alert(r.ErrorMsg);
+                                $("#checkimg").click();
+                            }
+                            else {
+                                location.href = "/Login/IndexView";
+                            }
+                        },
+                        error: function () {
+                            layer.alert("服务器异常");
+                            $("#checkimg").click();
+                        }
+                    })
+                }
+            })
         })
     </script>
 }
