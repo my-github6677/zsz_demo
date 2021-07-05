@@ -13,6 +13,8 @@ namespace House.IService
 
         int AddRolePermission(long roleID, long[] PermissionIds);
 
+        RoleDTO[] GetAll(int currentIndex, int pageSize);
+
         RoleDTO[] GetAll();
 
         RoleDTO[] GetByName(string name);

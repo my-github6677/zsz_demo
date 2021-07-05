@@ -71,12 +71,25 @@ namespace House.Service
             }
         }
 
+        public RoleDTO[] GetAll(int currentIndex,int pageSize)
+        {
+            using (HouseContext db = new HouseContext())
+            {
+                BaseService<RoleEntity> bs = new BaseService<RoleEntity>(db);
+                return bs.GetAll().AsNoTracking().Include(r=>r.AdminUsers).Include(r=>r.Permissions)
+                    .OrderByDescending(r => r.CreateDateTime)
+                    .ToList().Skip(currentIndex).Take(pageSize).Select(m => ToDto(m)).ToArray();
+            }
+        }
+
         public RoleDTO[] GetAll()
         {
             using (HouseContext db = new HouseContext())
             {
                 BaseService<RoleEntity> bs = new BaseService<RoleEntity>(db);
-                return bs.GetAll().AsNoTracking().ToList().Select(m => ToDto(m)).ToArray();
+                return bs.GetAll().AsNoTracking().Include(r => r.AdminUsers).Include(r => r.Permissions)
+                    .OrderByDescending(r => r.CreateDateTime)
+                    .ToList().Select(m => ToDto(m)).ToArray();
             }
         }
 

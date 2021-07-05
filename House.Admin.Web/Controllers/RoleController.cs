@@ -17,9 +17,9 @@ namespace House.Admin.Web.Controllers
 
         [HttpGet]
         [CheckPermission("jslb")]
-        public ActionResult Index()
+        public ActionResult Index(int pageIndex = 1)
         {
-            var roledto = roleService.GetAll();
+            var roledto = roleService.GetAll((pageIndex - 1) * 5, 5);
             return View(roledto);
         }
 
